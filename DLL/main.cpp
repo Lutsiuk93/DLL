@@ -25,8 +25,9 @@ void loadPlugin(const char* dll_name)
 
     auto* plugin = testfunc();
     std::cout << plugin->getName() << std::endl;
-
+    
     delete plugin;
+    FreeLibrary(hGetProcIDLL);
 
     }
 
